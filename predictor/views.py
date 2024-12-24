@@ -4,8 +4,7 @@ import pandas as pd
 import joblib
 import os
 
-# Load the saved model
-# model = joblib.load('C:/Users/LenovoX1/Desktop/Data Science Projects/customer_sales_predictor/best_sales_predictor.pkl')
+
 # Load the saved model
 model_path = os.path.join(os.path.dirname(__file__), 'models', 'best_sales_predictor.pkl')
 model = joblib.load(model_path)
