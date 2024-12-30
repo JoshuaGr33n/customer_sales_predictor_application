@@ -15,11 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from predictor.views import predict_sales, predict_health, classify_articles
+from predictor.views import predict_sales, predict_health, classify_articles, predict_house_price, translate, predict_turnover
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('predict/', predict_sales, name='predict_sales'),
-    path('predict_health/', predict_health, name='predict_health'),
-    path('classifier/', classify_articles, name='classify_text'),
+    path('predict-sales/', predict_sales, name='predict_sales'),
+    path('predict-health/', predict_health, name='predict_health'),
+    path('article-classifier/', classify_articles, name='classify_text'),
+    path('housing-price/', predict_house_price, name='housing'),
+    path('translate/', translate, name='translate'),
+    path('employee-turnover/', predict_turnover, name='predict_turnover'),
 ]

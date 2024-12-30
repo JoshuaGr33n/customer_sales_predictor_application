@@ -1,0 +1,10 @@
+
+<h1>Employee Turnover Prediction</h1>
+<form method="post">
+    {% csrf_token %} 
+    {{ form.as_p }} 
+    <button type="submit">Predict</button>
+</form>
+
+<h1>Prediction Result</h1>
+<p>{{ result }}</p>

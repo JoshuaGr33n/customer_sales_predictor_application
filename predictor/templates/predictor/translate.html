@@ -1,0 +1,27 @@
+<!-- myapp/templates/translate.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Translate Text</title>
+</head>
+<body>
+    <h1>Translate Text</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="english_text">English Text:</label>
+        <input type="text" id="english_text" name="english_text">
+        <button type="submit">Translate</button>
+    </form>
+</body>
+</html>
+<!-- myapp/templates/result.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Translation Result</title>
+</head>
+<body>
+    <h1>Translation Result</h1>
+    <p>{{ translation }}</p>
+</body>
+</html>
